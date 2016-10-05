@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "watch": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "outDir": "../../dist/api",
+    "sourceRoot": "../../src/api",
+    "lib": ["es6"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "typeRoots": [
+      "../../node_modules/@types"
+    ],
+    "types":[]
+  }
+}
