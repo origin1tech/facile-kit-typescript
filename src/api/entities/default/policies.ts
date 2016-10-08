@@ -36,11 +36,8 @@
  * ex: controllerName: '*'
  */
 
-import * as filters from './filters';
 
 // Define the policies.
 let policies = {
-
-	'*': '*'
 
 };
