@@ -6,6 +6,7 @@ import { base } from './base';
 
 // Production Environment
 let production: IConfig = {
+	env: 'production',
 	logLevel: 'error'
 };
 

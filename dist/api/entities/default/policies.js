@@ -34,9 +34,6 @@
  * at the top level as '*' or public.
  * ex: controllerName: '*'
  */
-"use strict";
 // Define the policies.
-var policies = {
-    '*': '*'
-};
+var policies = {};
 //# sourceMappingURL=policies.js.map

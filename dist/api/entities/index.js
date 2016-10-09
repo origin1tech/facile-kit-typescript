@@ -1,3 +1,6 @@
+/**
+ * Import all entities.
+ */
 "use strict";
-require('./user');
+require('./default');
 //# sourceMappingURL=index.js.map

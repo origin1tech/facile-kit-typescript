@@ -1,1 +1,5 @@
-import './user';
+/**
+ * Import all entities.
+ */
+
+import './default';

@@ -30,7 +30,9 @@ export let base: IConfig = {
 	logger: logger,
 
 	host: '127.0.0.1',
-	port: 3000,
+	port: 8080,
+
+	logLevel: 'info',
 
 	// Express Views
 	// @see https://expressjs.com/en/guide/using-template-engines.html

@@ -1,6 +1,25 @@
 "use strict";
-function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-}
-exports.capitalize = capitalize;
+var __extends = (this && this.__extends) || function (d, b) {
+    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+};
+var facile_1 = require('facile');
+/**
+ * Example Strings Service
+ *
+ * @class StringsService
+ * @extends {Service}
+ */
+var StringsService = (function (_super) {
+    __extends(StringsService, _super);
+    function StringsService() {
+        _super.apply(this, arguments);
+    }
+    StringsService.prototype.capitalize = function (str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    };
+    return StringsService;
+}(facile_1.Service));
+facile_1.facile.addService(StringsService);
 //# sourceMappingURL=strings.js.map

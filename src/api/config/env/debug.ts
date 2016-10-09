@@ -5,7 +5,9 @@ import { IConfig } from 'facile/interfaces';
 import { base } from './base';
 
 // Development Environment
-let debug: IConfig = {};
+let debug: IConfig = {
+	logLevel: 'debug'
+};
 
 // Extend the environment with base config.
 debug = facile.utils.extend({}, base, debug);

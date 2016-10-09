@@ -5,9 +5,7 @@ import { IConfig } from 'facile/interfaces';
 import { base } from './base';
 
 // Development Environment
-let development: IConfig = {
-
-};
+let development: IConfig = {};
 
 // Extend the environment with base config.
 development = facile.utils.extend({}, base, development);
