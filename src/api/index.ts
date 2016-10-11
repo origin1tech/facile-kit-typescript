@@ -23,6 +23,14 @@ import './entities';
 // need to pass a config to "configure"
 // Otherwise pass a specific environment
 // config or Facile will look for "development".
-// If doesn't exist defaults are used.;
-facile.configure('debug');
+// If doesn't exist defaults are used.
+facile.configure('debug')
+			.init()
+			.server()
+			.filters()
+			.models()
+			.controllers()
+			.routes()
+			.done()
+			.start();
 

@@ -11,7 +11,7 @@ let production: IConfig = {
 };
 
 // Extend the environment with base config.
-production = facile.utils.extend({}, base, production);
+production = facile.extend({}, base, production);
 
 // Add Configuration.
 facile.addConfig('production', production);

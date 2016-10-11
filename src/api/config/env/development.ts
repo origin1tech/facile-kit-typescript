@@ -8,7 +8,7 @@ import { base } from './base';
 let development: IConfig = {};
 
 // Extend the environment with base config.
-development = facile.utils.extend({}, base, development);
+development = facile.extend({}, base, development);
 
 // Add Configuration.
 facile.addConfig('development', development);

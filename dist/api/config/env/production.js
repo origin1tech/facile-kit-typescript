@@ -8,7 +8,7 @@ var production = {
     logLevel: 'error'
 };
 // Extend the environment with base config.
-production = facile_1.facile.utils.extend({}, base_1.base, production);
+production = facile_1.facile.extend({}, base_1.base, production);
 // Add Configuration.
 facile_1.facile.addConfig('production', production);
 //# sourceMappingURL=production.js.map

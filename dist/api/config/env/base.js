@@ -15,6 +15,13 @@ var logger = new winston_1.Logger({
 // Export Base so it can be used
 // to extend other configs.
 exports.base = {
+    // When false manuual control of
+    // each step of the initialization
+    // is required. Set to true and
+    // Facile will itialize automatically
+    // calling before & after listener
+    // events when defined.
+    auto: false,
     // Configure the Logger.
     // @see https://github.com/winstonjs/winston
     logger: logger,
@@ -22,17 +29,21 @@ exports.base = {
     port: 8080,
     logLevel: 'info',
     // Express Views
-    // @see https://expressjs.com/en/guide/using-template-engines.html
+    //
+    // @see http://expressjs.com/en/api.html#app.engine
     //
     // These settings are passed to
     // consolidate.js
     // @see https://github.com/tj/consolidate.js/
     //
     views: {
-        engine: 'hogan',
+        layout: 'index',
+        engine: {
+            name: 'html',
+            renderer: 'hogan'
+        },
         'view engine': 'html',
-        views: '/web/views'
-    },
-    database: ''
+        views: './dist/app'
+    }
 };
 //# sourceMappingURL=base.js.map

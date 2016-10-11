@@ -16,7 +16,46 @@ var DefaultController = (function (_super) {
     function DefaultController() {
         _super.apply(this, arguments);
     }
+    /**
+     * Renders Layout
+     *
+     * @param {IRequest} req
+     * @param {IResponse} res
+     *
+     * @memberOf DefaultController
+     */
     DefaultController.prototype.index = function (req, res) {
+        var config = this.facile._config;
+        res.render(config.views.layout);
+    };
+    /**
+     * Render Views Helper.
+     *
+     * @param {string} view
+     * @param {Object} [options]
+     * @param {ICallback} [cb]
+     * @returns
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.view = function (view, options, cb) {
+        return function renderView(req, res) {
+            res.render(view, options, cb);
+        };
+    };
+    /**
+     * Redirect Url Helper.
+     *
+     * @param {string} url
+     * @param {number} [status]
+     * @returns
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.redirect = function (url, status) {
+        return function urlRedirect(req, res) {
+            res.redirect(status || 301, url);
+        };
     };
     return DefaultController;
 }(facile_1.Controller));

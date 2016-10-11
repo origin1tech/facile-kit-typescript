@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/origin1tech/facile-kit#readme",
   "dependencies": {
+    "errorhandler": "^1.4.3",
     "facile": "github:origin1tech/facile-core",
     "winston": "^2.2.0"
   },
