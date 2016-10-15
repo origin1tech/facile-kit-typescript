@@ -1,5 +1,11 @@
 import { facile } from 'facile';
+import { DefaultController } from '../entities';
 
-let routes = {
+
+let main =  {
+
+	'/': 'DefaultController.index'
 
 };
+
+facile.registerRoute(main);

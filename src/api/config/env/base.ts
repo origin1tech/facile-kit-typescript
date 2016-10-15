@@ -1,19 +1,23 @@
+
+
 /**
  * Base Environment
  *
  * All other environments are
  * extended from this env.
  */
-import { facile } from 'facile';
-import { IConfig } from 'facile/interfaces';
+import { facile, IConfig } from 'facile';
 import { LoggerInstance, Logger, transports} from 'winston';
+
+// import * as mongoose from 'mongoose';
+// let connection = mongoose.connect('mongodb://127.0.0.1/facile');
 
 // Define Logger
 let logger: LoggerInstance = new Logger({
 			level: 'info',
 			transports: [
 				new (transports.Console)({
-					prettyPrint: true,
+					// prettyPrint: true,
 					handleExceptions: true,
 					humanReadableUnhandledException: true,
 					exitOnError: false
@@ -37,8 +41,14 @@ export let base: IConfig = {
 	// @see https://github.com/winstonjs/winston
 	logger: logger,
 
+	// The host addresss to listen on.
 	host: '127.0.0.1',
+
+	// The server port to listen on.
 	port: 8080,
+
+	// The log level for this
+	// environment configuration.
 	logLevel: 'info',
 
 	// Express Views
@@ -50,14 +60,36 @@ export let base: IConfig = {
 	// @see https://github.com/tj/consolidate.js/
 	//
 	views: {
+
+		// The layout path relative to the
+		// "views" path(s) defined below
+		// without the extension.
 		layout: 'index',
+
+		// The engine to use for views.
 		engine: {
+
+			// This is the file extension of the
+			// rederer used.
 			name: 'html',
-			renderer: 'hogan'
+
+			// Can be string which will result in
+			// consolidate[engine.renderer] or
+			// you can pass the consolidate rederer
+			// directly.
+			renderer: 'ejs'
+
 		},
+
+		// The express view engine.
 		'view engine': 'html',
+
+		// The path or paths to your views.
 		views: './dist/app'
+
 	}
 
 };
+
+facile.registerConfig('base', base);
 

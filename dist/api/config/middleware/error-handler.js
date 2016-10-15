@@ -4,6 +4,6 @@
  */
 var facile_1 = require('facile');
 var errorHandler = require('errorhandler');
-// if (facile._config.env === 'development')
-facile_1.facile.addMiddleware('requestLogger', errorHandler());
+if (process.env.NODE_ENV === 'development')
+    facile_1.facile.registerMiddleware('errorHandler', errorHandler());
 //# sourceMappingURL=error-handler.js.map

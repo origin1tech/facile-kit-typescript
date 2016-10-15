@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"/Volumes/DATA/Projects/WebNode/facile/facile-kit-typescript/src/api/","sources":["entities/default/index.ts"],"names":[],"mappings":";AACA,2BAA2B;AAC3B,QAAO,SAAS,CAAC,CAAA;AAEjB,gCAAgC;AAChC,QAAO,cAAc,CAAC,CAAA;AAEtB,0BAA0B;AAC1B,QAAO,YAAY,CAAC,CAAA"}
+{"version":3,"file":"index.js","sourceRoot":"/Volumes/DATA/Projects/WebNode/facile/facile-kit-typescript/src/api/","sources":["entities/default/index.ts"],"names":[],"mappings":";;;;AACA,gCAAgC;AAChC,iBAAc,cAAc,CAAC,EAAA;AAE7B,uBAAuB;AACvB,iBAAc,YAAY,CAAC,EAAA"}

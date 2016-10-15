@@ -21,5 +21,6 @@ var StringsService = (function (_super) {
     };
     return StringsService;
 }(facile_1.Service));
-facile_1.facile.addService(StringsService);
+exports.StringsService = StringsService;
+facile_1.facile.registerComponent(StringsService);
 //# sourceMappingURL=strings.js.map

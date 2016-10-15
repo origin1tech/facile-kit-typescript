@@ -1,14 +1,11 @@
 
 // Import Dependencies.
-import { facile } from 'facile';
-import { IConfig } from 'facile/interfaces';
-import { base } from './base';
+import { facile, IConfig } from 'facile';
 
 // Development Environment
-let development: IConfig = {};
-
-// Extend the environment with base config.
-development = facile.extend({}, base, development);
+export let development: IConfig = {
+	logLevel: 'debug'
+};
 
 // Add Configuration.
-facile.addConfig('development', development);
+facile.registerConfig('development', 'base', development);

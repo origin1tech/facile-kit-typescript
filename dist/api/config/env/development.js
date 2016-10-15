@@ -1,11 +1,10 @@
 "use strict";
 // Import Dependencies.
 var facile_1 = require('facile');
-var base_1 = require('./base');
 // Development Environment
-var development = {};
-// Extend the environment with base config.
-development = facile_1.facile.extend({}, base_1.base, development);
+exports.development = {
+    logLevel: 'debug'
+};
 // Add Configuration.
-facile_1.facile.addConfig('development', development);
+facile_1.facile.registerConfig('development', 'base', exports.development);
 //# sourceMappingURL=development.js.map

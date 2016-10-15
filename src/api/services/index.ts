@@ -1,1 +1,1 @@
-import './strings';
+export * from './strings';

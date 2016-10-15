@@ -40,7 +40,7 @@ var DefaultController = (function (_super) {
      */
     DefaultController.prototype.view = function (view, options, cb) {
         return function renderView(req, res) {
-            res.render(view, options, cb);
+            res.render(view, options);
         };
     };
     /**
@@ -59,5 +59,6 @@ var DefaultController = (function (_super) {
     };
     return DefaultController;
 }(facile_1.Controller));
-facile_1.facile.addController(DefaultController);
+exports.DefaultController = DefaultController;
+facile_1.facile.registerComponent(DefaultController);
 //# sourceMappingURL=controller.js.map

@@ -1,9 +1,6 @@
 
-// Import the Entity model.
-import './model';
+// Export the Entity controller.
+export * from './controller';
 
-// Import the Entity controller.
-import './controller';
-
-// Import Entity policies.
-import './policies';
+// Export the policies.
+export * from './policies';

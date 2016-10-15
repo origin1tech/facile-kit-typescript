@@ -31,4 +31,5 @@
  *
  */
 
+import './error-handler';
 import './request-logger';

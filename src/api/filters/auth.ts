@@ -4,18 +4,33 @@
  *
  */
 
-import { facile } from 'facile';
-import { IRequest, IResponse, INextFunction } from 'facile/interfaces';
+import { facile, Filter, IRequest, IResponse, INextFunction } from 'facile';
 
-class AuthFilter {
+export class DefaultFilter extends Filter {
 
+	/**
+	 * isAuthenticated
+	 *
+	 * @method isAuthenticated
+	 * @param {IRequest} req
+	 * @param {IResponse} res
+	 * @param {INextFunction} next
+	 *
+	 * @memberOf DefaultFilter
+	 */
 	isAuthenticated(req: IRequest, res: IResponse, next: INextFunction) {
+
+		// do something to ensure
+		// authenticated for example
+		// using express session.
 		next();
+
 	}
+
 	isAnonymous(req: IRequest, res: IResponse, next: INextFunction) {
 		next();
 	}
 
 }
 
-facile.addFilter(AuthFilter);
+facile.registerComponent(DefaultFilter);

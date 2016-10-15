@@ -1,6 +1,5 @@
 
-import { facile, Service } from 'facile';
-import { IFacile } from 'facile/interfaces';
+import { facile, Service, IFacile } from 'facile';
 
 /**
  * Example Strings Service
@@ -8,7 +7,7 @@ import { IFacile } from 'facile/interfaces';
  * @class StringsService
  * @extends {Service}
  */
-class StringsService extends Service {
+export class StringsService extends Service {
 
 	capitalize(str: string) {
 		return str.charAt(0).toUpperCase() + str.slice(1);
@@ -16,4 +15,4 @@ class StringsService extends Service {
 
 }
 
-facile.addService(StringsService);
+facile.registerComponent(StringsService);
