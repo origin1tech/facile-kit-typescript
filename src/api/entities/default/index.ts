@@ -1,6 +1,5 @@
-
-// Export the Entity controller.
+/**
+ * Import Default Entity
+ */
+import './policies';
 export * from './controller';
-
-// Export the policies.
-export * from './policies';

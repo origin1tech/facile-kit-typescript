@@ -1,12 +1,8 @@
-/**
- * Configuration
- * This file will import the environments,
- * middleware for the Express server,
- * custom services and security filters.
- */
 "use strict";
-// Import the environments.
+/**
+ * IMport Configurations & Middleware
+ */
 require('./env');
-// Import Middleware.
 require('./middleware');
+require('./policies');
 //# sourceMappingURL=index.js.map

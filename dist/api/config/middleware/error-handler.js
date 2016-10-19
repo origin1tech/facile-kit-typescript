@@ -1,6 +1,6 @@
 "use strict";
 /**
- * Example Middleware
+ * Error Handler Middleware
  */
 var facile_1 = require('facile');
 var errorHandler = require('errorhandler');

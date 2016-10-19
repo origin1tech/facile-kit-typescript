@@ -4,13 +4,10 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var facile_1 = require('facile');
 /**
- * Example Strings Service
- *
- * @class StringsService
- * @extends {Service}
+ * Default Service
  */
+var facile_1 = require('facile');
 var StringsService = (function (_super) {
     __extends(StringsService, _super);
     function StringsService() {

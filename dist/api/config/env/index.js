@@ -1,8 +1,7 @@
-/**
- * Import Environemts & Configure
- */
 "use strict";
-// Import Configurations.
+/**
+ * Import Configurations.
+ */
 require('./base');
 require('./debug');
 require('./development');

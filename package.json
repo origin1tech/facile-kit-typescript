@@ -1,6 +1,6 @@
 {
-  "name": "facile-kit",
-  "version": "0.0.1",
+  "name": "facile-kit-typescript",
+  "version": "0.1.0",
   "description": "Facile base template kit.",
   "main": "dist/index.js",
   "scripts": {

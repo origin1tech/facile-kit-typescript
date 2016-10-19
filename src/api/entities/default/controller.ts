@@ -22,34 +22,105 @@ export class DefaultController extends Controller {
 	}
 
 	/**
-	 * Render Views Helper.
+	 * view
 	 *
-	 * @param {string} view
-	 * @param {Object} [options]
-	 * @param {ICallback} [cb]
+	 * @desc handles rendering views.
+	 * @method view
+	 * @param {any} url
 	 * @returns
 	 *
 	 * @memberOf DefaultController
 	 */
-	view(view: string, options?: Object, cb?: ICallback) {
-		return function renderView(req: IRequest, res: IResponse) {
-			res.render(view, options);
+	view(url) {
+		return (req: IRequest, res: IResponse) => {
+			res.render(url);
 		};
 	}
 
 	/**
-	 * Redirect Url Helper.
+	 * redirect
 	 *
-	 * @param {string} url
-	 * @param {number} [status]
+	 * @desc handles redirected routes.
+	 * @method redirect
+	 * @param {any} url
 	 * @returns
 	 *
 	 * @memberOf DefaultController
 	 */
-	redirect(url: string, status?: number) {
-		return function urlRedirect(req: IRequest, res: IResponse) {
-			res.redirect(status || 301, url);
+	redirect(url) {
+		return (req: IRequest, res: IResponse) => {
+			res.redirect(url);
 		};
+	}
+
+	/**
+	 * find
+	 *
+	 * @desc find records handler.
+	 * @method find
+	 * @param {IRequest} req
+	 * @param {IResponse} res
+	 *
+	 * @memberOf DefaultController
+	 */
+	find(req: IRequest, res: IResponse) {
+		this.errors.notImplemented();
+	}
+
+	/**
+	 * findOne
+	 *
+	 * @desc find one record handler.
+	 * @method findOne
+	 * @param {IRequest} req
+	 * @param {IResponse} res
+	 *
+	 * @memberOf DefaultController
+	 */
+	findOne(req: IRequest, res: IResponse) {
+		this.errors.notImplemented();
+	}
+
+	/**
+	 * create
+	 *
+	 * @desc create record handler.
+	 * @method create
+	 * @param {IRequest} req
+	 * @param {IResponse} res
+	 *
+	 * @memberOf DefaultController
+	 */
+	create(req: IRequest, res: IResponse) {
+		this.errors.notImplemented();
+	}
+
+	/**
+	 * update
+	 *
+	 * @desc update record handler.
+	 * @method update
+	 * @param {IRequest} req
+	 * @param {IResponse} res
+	 *
+	 * @memberOf DefaultController
+	 */
+	update(req: IRequest, res: IResponse) {
+		this.errors.notImplemented();
+	}
+
+	/**
+	 * destroy
+	 *
+	 * @desc destroy record handler.
+	 * @method destroy
+	 * @param {IRequest} req
+	 * @param {IResponse} res
+	 *
+	 * @memberOf DefaultController
+	 */
+	destroy(req: IRequest, res: IResponse) {
+		this.errors.notImplemented();
 	}
 
 }

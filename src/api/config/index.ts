@@ -1,14 +1,8 @@
 /**
- * Configuration
- * This file will import the environments,
- * middleware for the Express server,
- * custom services and security filters.
+ * IMport Configurations & Middleware
  */
-
-// Import the environments.
 import './env';
-
-// Import Middleware.
 import './middleware';
+import './policies';
 
 

@@ -1,6 +1,4 @@
 "use strict";
-exports.policy = {
-    index: 'AuthFilter.isAnonymous'
-};
-//facile.registerPolicy('DefaultController', policy); 
+var policy = {};
+// facile.registerPolicy('DefaultController', policy); 
 //# sourceMappingURL=policies.js.map

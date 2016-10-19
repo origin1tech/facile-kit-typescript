@@ -1,11 +1,7 @@
-
-// Import Dependencies.
 import { facile, IConfig } from 'facile';
 
-// Development Environment
-export let development: IConfig = {
-	logLevel: 'debug'
+let development: IConfig = {
+	logLevel: 'info'
 };
 
-// Add Configuration.
 facile.registerConfig('development', 'base', development);

@@ -1,12 +1,8 @@
-
+/**
+ * Default Service
+ */
 import { facile, Service, IFacile } from 'facile';
 
-/**
- * Example Strings Service
- *
- * @class StringsService
- * @extends {Service}
- */
 export class StringsService extends Service {
 
 	capitalize(str: string) {

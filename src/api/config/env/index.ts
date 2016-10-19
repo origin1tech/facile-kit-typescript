@@ -1,9 +1,6 @@
-
 /**
- * Import Environemts & Configure
+ * Import Configurations.
  */
-
-// Import Configurations.
 import './base';
 import './debug';
 import './development';

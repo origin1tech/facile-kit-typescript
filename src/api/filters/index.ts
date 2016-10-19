@@ -1,5 +1,4 @@
 /**
- * Import each security
- * filter file.
+ * Export Filters
  */
 export * from './auth';

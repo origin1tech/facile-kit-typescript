@@ -29,33 +29,99 @@ var DefaultController = (function (_super) {
         res.render(config.views.layout);
     };
     /**
-     * Render Views Helper.
+     * view
      *
-     * @param {string} view
-     * @param {Object} [options]
-     * @param {ICallback} [cb]
+     * @desc handles rendering views.
+     * @method view
+     * @param {any} url
      * @returns
      *
      * @memberOf DefaultController
      */
-    DefaultController.prototype.view = function (view, options, cb) {
-        return function renderView(req, res) {
-            res.render(view, options);
+    DefaultController.prototype.view = function (url) {
+        return function (req, res) {
+            res.render(url);
         };
     };
     /**
-     * Redirect Url Helper.
+     * redirect
      *
-     * @param {string} url
-     * @param {number} [status]
+     * @desc handles redirected routes.
+     * @method redirect
+     * @param {any} url
      * @returns
      *
      * @memberOf DefaultController
      */
-    DefaultController.prototype.redirect = function (url, status) {
-        return function urlRedirect(req, res) {
-            res.redirect(status || 301, url);
+    DefaultController.prototype.redirect = function (url) {
+        return function (req, res) {
+            res.redirect(url);
         };
+    };
+    /**
+     * find
+     *
+     * @desc find records handler.
+     * @method find
+     * @param {IRequest} req
+     * @param {IResponse} res
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.find = function (req, res) {
+        this.errors.notImplemented();
+    };
+    /**
+     * findOne
+     *
+     * @desc find one record handler.
+     * @method findOne
+     * @param {IRequest} req
+     * @param {IResponse} res
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.findOne = function (req, res) {
+        this.errors.notImplemented();
+    };
+    /**
+     * create
+     *
+     * @desc create record handler.
+     * @method create
+     * @param {IRequest} req
+     * @param {IResponse} res
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.create = function (req, res) {
+        this.errors.notImplemented();
+    };
+    /**
+     * update
+     *
+     * @desc update record handler.
+     * @method update
+     * @param {IRequest} req
+     * @param {IResponse} res
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.update = function (req, res) {
+        this.errors.notImplemented();
+    };
+    /**
+     * destroy
+     *
+     * @desc destroy record handler.
+     * @method destroy
+     * @param {IRequest} req
+     * @param {IResponse} res
+     *
+     * @memberOf DefaultController
+     */
+    DefaultController.prototype.destroy = function (req, res) {
+        this.errors.notImplemented();
     };
     return DefaultController;
 }(facile_1.Controller));

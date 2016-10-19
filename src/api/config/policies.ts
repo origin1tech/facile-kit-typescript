@@ -1,10 +1,10 @@
 /**
- * Default Policy
+ * Policies
  */
 import { IPolicy, facile } from 'facile';
 
 let policy: IPolicy = {
-
+	'*': true
 };
 
-// facile.registerPolicy('DefaultController', policy);
+facile.registerPolicy(policy);

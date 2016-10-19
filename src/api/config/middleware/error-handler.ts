@@ -1,6 +1,5 @@
-
 /**
- * Example Middleware
+ * Error Handler Middleware
  */
 import { facile,  IRequest, IResponse, INextFunction } from 'facile';
 import * as errorHandler from 'errorhandler';
