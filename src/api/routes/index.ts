@@ -1,7 +1,7 @@
-import { facile } from 'facile';
+import { facile, IRoutes } from 'facile';
 import { DefaultController } from '../entities';
 
-let main =  {
+let main: IRoutes =  {
 
 	'/': 'DefaultController.index'
 

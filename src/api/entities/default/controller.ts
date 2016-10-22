@@ -1,4 +1,8 @@
-import { facile, IRequest, IResponse, Controller, ICallback, IFacile } from 'facile';
+import { facile, IRequest, IResponse,
+				Controller, ICallback, IFacile } from 'facile';
+import { StringsService } from '../../services';
+import { UserModel } from '../';
+
 
 /**
  * Default Controller
@@ -63,8 +67,11 @@ export class DefaultController extends Controller {
 	 *
 	 * @memberOf DefaultController
 	 */
-	find(req: IRequest, res: IResponse) {
-		this.errors.notImplemented();
+	find(Model: any) {
+		console.log(Model);
+		return (req: IRequest, res: IResponse) => {
+			this.errors.notImplemented();
+		};
 	}
 
 	/**
@@ -77,8 +84,10 @@ export class DefaultController extends Controller {
 	 *
 	 * @memberOf DefaultController
 	 */
-	findOne(req: IRequest, res: IResponse) {
-		this.errors.notImplemented();
+	findOne(Model: any) {
+		return (req: IRequest, res: IResponse) => {
+			this.errors.notImplemented();
+		};
 	}
 
 	/**
@@ -91,8 +100,10 @@ export class DefaultController extends Controller {
 	 *
 	 * @memberOf DefaultController
 	 */
-	create(req: IRequest, res: IResponse) {
-		this.errors.notImplemented();
+	create(Model: any) {
+		return (req: IRequest, res: IResponse) => {
+			this.errors.notImplemented();
+		};
 	}
 
 	/**
@@ -105,8 +116,10 @@ export class DefaultController extends Controller {
 	 *
 	 * @memberOf DefaultController
 	 */
-	update(req: IRequest, res: IResponse) {
-		this.errors.notImplemented();
+	update(Model: any) {
+		return (req: IRequest, res: IResponse) => {
+			this.errors.notImplemented();
+		};
 	}
 
 	/**
@@ -119,8 +132,10 @@ export class DefaultController extends Controller {
 	 *
 	 * @memberOf DefaultController
 	 */
-	destroy(req: IRequest, res: IResponse) {
-		this.errors.notImplemented();
+	destroy(Model: any) {
+		return (req: IRequest, res: IResponse) => {
+				this.errors.notImplemented();
+		};
 	}
 
 }

@@ -12,12 +12,7 @@ import './entities';
 import './routes';
 
 facile.start('debug', () => {
-
 	if (facile._config.env === 'development')
 		build.development();
-
-	else
-		build.production();
-
 });
 

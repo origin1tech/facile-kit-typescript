@@ -4,7 +4,7 @@
 import { IPolicy, facile } from 'facile';
 
 let policy: IPolicy = {
-	'*': true
+		'*': false
 };
 
 facile.registerPolicy(policy);
