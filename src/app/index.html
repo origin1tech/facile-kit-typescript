@@ -1,51 +1,20 @@
 <!doctype html>
-
 <html lang="en">
 
 	<head>
-		 <meta charset="utf-8">
-		<% if (htmlWebpackPlugin.options.meta) { %>
-		<% for (var key in htmlWebpackPlugin.options.meta) { %>
-		<meta name="<%= key %>" content="<%= htmlWebpackPlugin.options.meta[key] %>">
-		<% } %>
-		<% } %>
-		<title><%= htmlWebpackPlugin.options.title || 'Webpack App'%></title>
+
+		<meta charset="utf-8">
+		<title>Facile App</title>
 		<meta name="description" content="The HTML5 Herald">
 		<meta name="author" content="SitePoint">
-		<% if (htmlWebpackPlugin.files.favicon) { %>
 		<link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon%>">
-		<% } %>
-		<% for (var css in htmlWebpackPlugin.files.css) { %>
-		<link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
-		<% } %>
-		<meta name="tw:test" content="TWITTER">
+
 	</head>
 
 	<body>
 
-		<% if (htmlWebpackPlugin.options.unsupportedBrowser) { %>
-		<style>.unsupported-browser { display: none; }</style>
-		<div class="unsupported-browser">
-			Sorry, your browser is not supported.  Please upgrade to
-			the latest version or switch your browser to use this site.
-			See <a href="http://outdatedbrowser.com/">outdatedbrowser.com</a>
-			for options.
-		</div>
-		<% } %>
-
-		<!-- Main Content -->
 		<h2>Welcome to Facile</h2>
 
-		<p>
-			The bare bones framework.
-		</p>
-
-		<!-- Static Scripts -->
-		<script src=""></script>
-		<!-- App Injected -->
-		<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
-		<script src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
-		<% } %>
 	</body>
 
 </html>

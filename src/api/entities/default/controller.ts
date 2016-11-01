@@ -1,8 +1,6 @@
 import { facile, IRequest, IResponse,
 				Controller, ICallback, IFacile } from 'facile';
 import { StringsService } from '../../services';
-import { UserModel } from '../';
-
 
 /**
  * Default Controller
@@ -68,7 +66,6 @@ export class DefaultController extends Controller {
 	 * @memberOf DefaultController
 	 */
 	find(Model: any) {
-		console.log(Model);
 		return (req: IRequest, res: IResponse) => {
 			this.errors.notImplemented();
 		};

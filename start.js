@@ -1,22 +1,19 @@
 'use strict';
 
-let build = require('./build');
+// let facile = require('facile');
+// let api = require('./dist/api');
 
-// Get Argv
-let argv = process.argv.splice(1);
+// let shell = require('shelljs');
 
-// Grab first element the command.
-let cmd = argv[0];
+// let api = () => {
+// 	sh.exec('tsc -p ./src/tsconfig.json', {}, () => {
 
-// Split the command pop last.
-// should be webpack or webpack-dev-server.
-cmd = cmd.split('/').pop();
+// 	});
+// };
 
-// Check if is webpack-dev-server or --dev.
-let isProd = !/dev-server$/.test(cmd) || argv.indexOf('--prod') !== -1 || argv.indexOf('-p') !== -1;
+// let app = () => {
+// 	sh.exec('tsc -p ./src/tsconfig.json', {}, () => {
 
-// Load dev or production build.
-if (!isProd)
-  build.development();
-else
-  build.production();
+// 	});
+// };
+

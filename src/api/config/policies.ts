@@ -1,5 +1,5 @@
 /**
- * Policies
+ * Default Policies
  */
 import { IPolicy, facile } from 'facile';
 
